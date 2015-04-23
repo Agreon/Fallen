@@ -1,0 +1,5 @@
+[14:53:49] Initialized Window and OpenGL.
+[14:53:49] Loaded texture successfully. agreon_logo | data/agreon_logo.png
+[14:53:49] Loaded texture successfully. player_anim | data/player_right_anim.png
+[14:53:49] Loaded font file successful. roboto | data/roboto.ttf
+[14:53:50] Loaded Sound file successful. wolf_howl | data/wolf_howl.wav
