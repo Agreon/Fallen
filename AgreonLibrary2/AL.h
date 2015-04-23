@@ -12,6 +12,7 @@
 #include "Animation.h"
 #include "Input.h"
 #include "Sound.h"
+#include "Jsonparser.h"
 
 #endif	/* AL_H */
 

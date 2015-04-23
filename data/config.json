@@ -1,0 +1,6 @@
+{
+	"AppName": "Fallen",
+	"ScreenWidth": 1080,
+	"ScreenHeight": 720,
+	"ResourceFile": "data/resources.json"
+}

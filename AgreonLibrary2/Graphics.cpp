@@ -23,7 +23,6 @@ namespace AL
 
     void Graphics::init(int screen_width, int screen_height, const char* windowTitle, const char* iconSrc)
     {
-            Log::reset();
             m_Screen_Width  = screen_width;
             m_Screen_Height = screen_height;
 
