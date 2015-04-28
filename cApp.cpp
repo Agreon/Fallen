@@ -10,22 +10,37 @@ cApp::~cApp()
 
 void cApp::Run()
 {
-	m_Running = Init();
+	if( !Init() ) m_StateID = STATE_EXIT;
+	else m_StateID = STATE_GAME;
 
-	while(m_Running) 
+
+	m_CurrentState = new GS_Game(m_Graphics,m_Animations,m_Input,m_Sound);
+	while( m_StateID != STATE_EXIT) 
 	{
 	    m_Input->handleInput();
-
 	    if(m_Input->isKeyReleased(SDLK_ESCAPE))
 	    {
-	    	m_Running = false;
+	    	m_StateID = STATE_EXIT;
 	    }
 
+	    if(m_Input->isKeyReleased('s'))
+	    {
+	    	cout << "sss" << endl;
+	    }
+
+
+	    m_CurrentState->Event();
+
+	    m_NextState = m_CurrentState->Update( /*m_Timer->GetDelta()*/ 0 );
+	    
 	    glClear(GL_COLOR_BUFFER_BIT);
-	    glClearColor(1,1,1,1);
-	    m_Graphics->setColor(AL::color(1,1,1,1));
-	    m_Graphics->drawTexture("agreon_logo",0,0);
+	    glClearColor(0,0,0,1);
+	    m_CurrentState->Draw();
 	    m_Graphics->swapWindow();
+	   	
+	   	ChangeState();
+
+	    SDL_Delay(16);
 	}
 
 	AL::Log::write(AL::LOG_INFORMATION,"App","Shutting down..");
@@ -114,4 +129,16 @@ bool cApp::LoadResources()
 
 void cApp::ChangeState()
 {
+	if(m_NextState == STATE_NULL) return;
+
+	if(m_NextState != STATE_EXIT) delete m_CurrentState;
+
+	switch(m_NextState)
+	{
+		case STATE_GAME:
+			m_CurrentState = new GS_Game(m_Graphics,m_Animations,m_Input,m_Sound);		
+			break;
+	}
+	m_StateID = m_NextState;
+	m_NextState = STATE_NULL;
 }

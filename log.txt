@@ -1,4 +1,17 @@
-[12:56:47] [INFO] 'SoundManager': Initialized Sound.
-[12:56:47] [INFO] 'GraphicsManager': Initialized Window and OpenGL.
-[12:56:47] [INFO] 'GraphicsManager': Loaded texture successfully. agreon_logo | data/img/agreon_logo.png
-[12:56:49] [INFO] 'App': Shutting down..
+[13:37:34] [INFO] 'SoundManager': Initialized Sound.
+[13:37:37] [INFO] 'GraphicsManager': Initialized Window and OpenGL.
+[13:37:37] [INFO] 'GraphicsManager': Loaded texture successfully. agreon_logo | data/img/agreon_logo.png
+[13:37:37] [INFO] 'GraphicsManager': Loaded texture successfully. Skeleton | data/img/skeleton.png
+[13:37:37] [INFO] 'GraphicsManager': Loaded texture successfully. Skeleton Archer | data/img/skeleton.png
+[13:37:37] [INFO] 'GraphicsManager': Loaded texture successfully. Skeleton Mage | data/img/skeleton.png
+[13:37:37] [INFO] 'JSON Parser': Loaded object: Skeleton
+[13:37:37] [INFO] 'JSON Parser': health: 20
+[13:37:37] [INFO] 'JSON Parser': dmg: 5
+[13:37:37] [INFO] 'JSON Parser': Loaded object: Skeleton Archer
+[13:37:37] [INFO] 'JSON Parser': health: 10
+[13:37:37] [INFO] 'JSON Parser': dmg: 10
+[13:37:37] [INFO] 'JSON Parser': range: 20
+[13:37:37] [INFO] 'JSON Parser': Loaded object: Skeleton Mage
+[13:37:37] [INFO] 'JSON Parser': health: 5
+[13:37:37] [INFO] 'JSON Parser': dmg: 15
+[13:37:41] [INFO] 'App': Shutting down..

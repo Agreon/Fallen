@@ -1,4 +1,6 @@
 #include "AgreonLibrary2/AL.h"
+#include "GameState.h"
+#include "GS_Game.h"
 
 using namespace rapidjson;
 using namespace std;
@@ -13,7 +15,7 @@ private:
 
 	bool 					m_Running;
 
-	//GameState 				m_CurrentState;
+	GameState 				*m_CurrentState;
 	int 					m_NextState;
 	int 					m_StateID;
 
